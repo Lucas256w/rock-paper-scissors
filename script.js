@@ -51,6 +51,7 @@ function resultFunc(str, winner, loser) {
 
 function playRound(playerSelection) {
     const computerSelection = getComputerChoice();
+    computerChoice.textContent = computerSelection;
     if (playerSelection == "rock") {
         if (computerSelection == "rock") {
             resultFunc('tie');
@@ -102,8 +103,9 @@ paper.addEventListener('click', () => {
 });
 
 const result = document.querySelector('.result');
-const message = document.querySelector('.message')
+const message = document.querySelector('.message');
 const score = document.querySelector('.score');
+const computerChoice = document.querySelector('.computerChoice');
 
 
 

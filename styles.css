@@ -1,0 +1,105 @@
+/*Structure of the page */
+
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    min-height: 100vh;
+    font-family: "Marker Felt", fantasy, sans-serif;
+}
+
+header,
+footer {
+    display: flex;
+    background-color: rgb(28, 27, 27);
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    background-color: rgb(54, 54, 86);
+}
+
+/* HEADERr */
+
+header h1{
+    word-spacing: 20px;
+    padding: 10px 0;
+    font-size: 50px;
+}
+
+/* MAIN */
+
+#container {
+    align-items: center;
+    color: white;
+}
+
+#container .result {
+    margin-top: 32px;
+    font-size: 42px;
+    word-spacing: 20px;
+}
+
+#container .message {
+    margin-top: 5px;
+    word-spacing: 8px;
+}
+
+#container .rps {
+    margin-top: 5px;
+}
+
+#container button {
+    border: none;
+    min-width: 200px;
+    min-height: 200px;
+    margin: 0 10px;
+    border-radius: 10px;
+    font-family: "Marker Felt", fantasy, sans-serif;
+    font-size: 32px;
+    color: white;
+    background-color: orange;
+    -webkit-text-stroke: 1px black;
+}
+
+#container button:hover {
+    background-color: darkorange;
+    transition: 0.2s;
+}
+
+#container .computerChoiceTitle {
+    margin-top: 20px;
+    font-size: 42px;
+}
+
+#container .computerChoice {
+    margin-top: 5px;
+    min-width: 200px;
+    min-height: 200px;
+    background-color: orange;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    -webkit-text-stroke: 1px black;
+}
+
+#container .score {
+    margin-top: 32px;
+    margin-bottom: 32px;
+    min-height: 22px;
+    font-size: 20px;
+}
+
+/* FOOTER */
+
+footer {
+    padding: 20px;
+    font-size: 16px;
+}
