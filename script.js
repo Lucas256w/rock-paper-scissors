@@ -29,15 +29,18 @@ function checkScore(win, lose) {
 function resultFunc(str, winner, loser) {
     switch (true) {
         case str == 'win':
-            result.textContent = "You Win! " + winner + " beats " + loser;
+            result.textContent = "You Win!"
+            message.textContent = winner + " beats " + loser;
             winCount++;
             break;
         case str == 'tie':
             result.textContent = "It's a tie!";
+            message.textContent = "Nobody Wins"
             tieCount++;
             break;
         case str == 'lose':
-            result.textContent = "You Lose! " + winner + " beats " + loser;
+            result.textContent = "You Lose!"
+            message.textContent = winner + " beats " + loser;
             loseCount++;
             break;
     }
@@ -99,8 +102,9 @@ paper.addEventListener('click', () => {
 });
 
 const result = document.querySelector('.result');
-
+const message = document.querySelector('.message')
 const score = document.querySelector('.score');
+
 
 
 
