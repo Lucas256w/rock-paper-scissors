@@ -103,3 +103,64 @@ footer {
     padding: 20px;
     font-size: 16px;
 }
+
+/* Restart Menu */
+
+.popup {
+    position: fixed;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: rgb(28, 27, 27);
+    text-align: center;
+    font-size: 30px;
+    user-select: none;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+}
+
+.popup.active {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.popupTitle {
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+}
+
+.restartButton {
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    color:white;
+    background-color: orange;
+    font-family: "Marker Felt", fantasy, sans-serif;
+    -webkit-text-stroke: 1px black;
+    font-size: 24px;
+}
+
+.restartButton:hover {
+    background-color: darkorange;
+    transition: 0.2s;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.6;
+}
+
+.overlay.active {
+    display: block;
+}

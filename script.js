@@ -19,10 +19,12 @@ function getComputerChoice() {
 
 function checkScore(win, lose) {
     if(win == 5) {
-        result.textContent = "You beat the computer congratulations!!!";
+        openPopup();
+        popupTitle.textContent = "You beat the computer congratulations!!!";
     }
     else if (lose == 5) {
-        result.textContent = "oh no the computer bested you!!";
+        openPopup();
+        popupTitle.textContent = "Oh no the computer bested you!!";
     }
 }
 
@@ -46,7 +48,7 @@ function resultFunc(str, winner, loser) {
     }
     score.textContent = "Current Score Win: - " + winCount + " Tie- " + tieCount + " Lose- " + loseCount;
 
-    checkScore(winCount,tieCount);
+    checkScore(winCount,loseCount);
 }
 
 function playRound(playerSelection) {
@@ -87,6 +89,26 @@ function playRound(playerSelection) {
     }
 }
 
+function openPopup() {
+    popup.classList.add('active');
+    overlay.classList.add('active');
+}
+
+function closePopup() {
+    popup.classList.remove('active');
+    overlay.classList.add('active');
+}
+
+const result = document.querySelector('.result');
+const message = document.querySelector('.message');
+const score = document.querySelector('.score');
+const computerChoice = document.querySelector('.computerChoice');
+const popup = document.querySelector('.popup');
+const popupTitle = document.querySelector('.popupTitle');
+const overlay = document.querySelector('.overlay');
+const restartButton = document.querySelector('.restartButton');
+
+
 const rock = document.querySelector('.rock');
 rock.addEventListener('click', () => {
     playRound("rock");
@@ -102,10 +124,12 @@ paper.addEventListener('click', () => {
     playRound("paper");
 });
 
-const result = document.querySelector('.result');
-const message = document.querySelector('.message');
-const score = document.querySelector('.score');
-const computerChoice = document.querySelector('.computerChoice');
+restartButton.addEventListener('click', () => {
+    location.reload();
+});
+
+
+
 
 
 
